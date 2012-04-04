@@ -53,7 +53,14 @@ namespace BitmapFont
                 comment += " // " + letter;
             }
 
-            return "{" + Size + "," + string.Join(",", _columns) + "}," + comment;
+            var columns = new List<string>(_columns.Count);
+
+            foreach (var column in _columns)
+            {
+                columns.Add(column.ToString());
+            }
+
+            return "{" + Size + "," + string.Join(",", columns.ToArray()) + "}," + comment;
         }
 
         /// <summary>

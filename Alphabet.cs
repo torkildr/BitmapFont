@@ -84,7 +84,14 @@ namespace BitmapFont
         /// <returns></returns>
         public override string ToString()
         {
-            return "{\n    " + string.Join("\n    ", _glyphs) + "\n};";
+            var glyphs = new List<string>(_glyphs.Count);
+
+            foreach (var glyph in _glyphs)
+            {
+                glyphs.Add(glyph.ToString());
+            }
+
+            return "{\n    " + string.Join("\n    ", glyphs.ToArray()) + "\n};";
         }
 
         /// <summary>
