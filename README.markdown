@@ -2,10 +2,19 @@ Bitmap Font Export Utility
 ==========================
 
 Author: Torkild Retvedt
+
 This software is Licensed under [GPLv3] [2]
+
+
+About
+-----
 
 Utility for creating variable width bitmap font, created for Atmega 328, to be
 displayed on a 128x8 dot matrix led display ([this project] [1]).
+
+
+Compiling
+---------
 
 The source should be able to compile both with Visual Studio or mono:
 
@@ -14,6 +23,9 @@ The source should be able to compile both with Visual Studio or mono:
 or
 
     xbuild BitmapFont.sln
+
+Running
+-------
 
 The program can be run, thusly:
 
